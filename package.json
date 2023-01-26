@@ -1,0 +1,20 @@
+{
+  "name": "react__ocr_p3",
+  "version": "1.0.0",
+  "description": "1. Le Projet",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Litibe/React__OCR_P3.git"
+  },
+  "author": "Lionel TISSIER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Litibe/React__OCR_P3/issues"
+  },
+  "homepage": "https://github.com/Litibe/React__OCR_P3#readme"
+}
