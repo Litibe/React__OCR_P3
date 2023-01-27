@@ -1,0 +1,15 @@
+@function black-or-white-color($bgcolor) {
+  @if (lightness($bgcolor) >= 50%) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+@function darken-bg-container($bg__container) {
+  @return darken($bg__container, 10%);
+}
+
+@function lighten-color-50($color) {
+  @return lighten($color, 50%);
+}

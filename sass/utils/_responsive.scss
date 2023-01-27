@@ -1,0 +1,5 @@
+$breakpoint:(tab: 991px, mobile: 767px);
+
+@mixin mobile{
+    @media screen and (max-width: map-get($breakpoint, mobile)){@content;}
+};

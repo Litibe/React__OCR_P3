@@ -1,10 +1,10 @@
 {
   "name": "react__ocr_p3",
   "version": "1.0.0",
-  "description": "1. Le Projet",
+  "description": "react__ocr_p3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

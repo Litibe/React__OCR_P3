@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 50px) minmax(992px, 1340px) minmax(0, 50px);
+  grid-template-rows: 1fr;
+  @include mobile {
+    grid-template-columns:
+      minmax(0, 50px) minmax(375px, map-get($breakpoint, mobile))
+      minmax(0, 50px);
+  }
+}
+
+.container-page {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: $bg__container;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.d-none {
+  display: none;
+}
+.color-white {
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  background: darken($bg__container, 70%);
+  color: black-or-white-color($bg__container);
+}
