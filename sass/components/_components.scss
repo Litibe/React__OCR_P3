@@ -23,44 +23,129 @@ button {
   }
 }
 
-.card__fct {
-  height: 75px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: $bg__container;
-  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
-  border-radius: 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  & i {
-    color: rgba($color__font-primary, 0.4);
-    font-size: 20px;
-    margin-left: 35px;
-  }
-  & span {
-    margin-left: 20px;
-  }
-  &__bg-color {
-    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
-    background-color: lighten(mix($color-primary, $color-secondary, 70%), 33%);
+.card {
+  &__fct {
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
+    height: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $bg__container;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    & .badge__left {
+      border-radius: 50px;
+      background-color: $color-primary;
+      color: white;
+      width: 22px;
+      height: 18px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 14px;
+      padding-top: 4px;
+      position: relative;
+      left: -15px;
+    }
     & i {
-      color: $color-primary;
+      color: rgba($color__font-primary, 0.4);
+      font-size: 20px;
+    }
+    & span {
+      margin-left: 20px;
+    }
+    &__bg-color {
+      background-color: lighten(
+        mix($color-primary, $color-secondary, 70%),
+        33%
+      );
+      & i {
+        color: $color-primary;
+      }
     }
   }
-}
+  &__store {
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
+    height: 250px;
+    border-radius: 15px 15px;
+    background-color: white;
+    transition: all ease-in-out 400ms;
+    &:hover {
+      filter: drop-shadow(0px 0px 15px rgba($color-primary, 0.4));
+      transition: all ease-in-out 400ms;
+      & h2 {
+        color: $color-primary;
+        transition: all ease-in-out 500ms;
+      }
+    }
+    @each $animal in puma, sea-slug, egret, salamander {
+      &__img {
+        height: 175px;
+        border-radius: 15px 15px 0 0;
+        background-size: cover;
+        background-position: bottom;
+      }
+      &__badge {
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 35%);
+        padding: 5px 10px;
+        margin: 10px;
+        width: min-content;
+        position: absolute;
+        right: 0;
+        font-size: 14px;
+        transition: all ease-in-out 700ms;
+        &:hover {
+          transform: scale(1.2);
+          transition: all ease-in-out 700ms;
+        }
+      }
+      &__banner {
+        background-color: transparent;
+        border-radius: 0 0 15px 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 75px;
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+        & h2,
+        h3 {
+          margin: 2px 10px;
+          font-size: 18px;
+        }
+      }
+      &__love {
+        width: 23px;
+        height: 23px;
+        color: transparent;
+        background-color: black;
+        --svg: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="bi bi-heart">\
+        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>\
+        </svg>');
+        -webkit-mask: var(--svg);
+        mask: var(--svg);
+        transition: all ease-in-out 700ms;
 
-.badge__left {
-  border-radius: 50px;
-  background-color: $color-primary;
-  color: white;
-  width: 22px;
-  height: 18px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 14px;
-  vertical-align: center;
-  padding-top: 4px;
-  position: absolute;
-  left: -10px;
+        &:hover {
+          color: transparent;
+          background: $color-primary;
+          background: linear-gradient(
+            176deg,
+            $color-secondary 0%,
+            $color-primary 100%
+          );
+          --svg: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="bi bi-heart-fill">\
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>\
+        </svg>');
+          transition: all ease-in-out 700ms;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

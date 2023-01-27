@@ -66,14 +66,17 @@ nav {
   margin-top: -20px;
   height: 390px;
   padding: 25px 25px;
-  background-color: antiquewhite;
   & h2 {
     margin-left: -10px;
   }
   &__list {
     margin-top: 40px;
   }
-  &__list div {
+  &__list article {
     margin: 20px 5px 20px 5px;
   }
+}
+
+.section__store {
+  padding: 30px 15px;
 }

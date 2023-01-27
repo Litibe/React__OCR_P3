@@ -1,3 +1,5 @@
+@use "sass:meta";
+
 @function black-or-white-color($bgcolor) {
   @if (lightness($bgcolor) >= 50%) {
     @return black;
@@ -13,3 +15,19 @@
 @function lighten-color-50($color) {
   @return lighten($color, 50%);
 }
+
+@mixin card__bg__store__img($args...) {
+  @each $name, $img in meta.keywords($args) {
+    .bg-#{$name} {
+      background-image: $img;
+    }
+  }
+}
+@include card__bg__store__img(
+  $store1:
+    url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"),
+  $store2: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"),
+  $store3: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"),
+  $store4:
+    url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg")
+);
