@@ -4,8 +4,8 @@
   "description": "react__ocr_p3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/style.css/"
   },
   "browserslist": [
     ">0.2%",
