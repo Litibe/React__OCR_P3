@@ -3,20 +3,49 @@ footer {
   color: black-or-white-color(darken($bg__container, 70%));
   height: 190px;
   padding: 10px 20px 0 20px;
+
   & h2 {
     font-family: "Shrikhand", cursive;
     font-weight: 100;
-    font-size: 16px;
+    text-align: center;
+    @include mobile {
+      text-align: start;
+      font-size: 16px;
+    }
   }
-  & ul {
-    list-style-type: none;
+  & .footer__nav {
+    height: 60%;
     padding: 0;
-    & li {
-      margin: 10px 0;
-      font-weight: 400;
-      & i {
-        font-size: 14px;
-        margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @include mobile {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  & section {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: 400;
+
+    @include mobile {
+      height: auto;
+    }
+    & i {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    & a {
+      margin: 5px 0;
+      color: inherit;
+      transition: all ease-in-out 300ms;
+
+      &:hover {
+        color: $color-primary;
+        transition: all ease-in-out 300ms;
       }
     }
   }

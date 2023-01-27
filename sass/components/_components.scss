@@ -97,6 +97,8 @@ button {
         transition: all ease-in-out 700ms;
         &:hover {
           transform: scale(1.2);
+          background-color: $color-primary;
+          color: lighten($color-primary, 35%);
           transition: all ease-in-out 700ms;
         }
       }

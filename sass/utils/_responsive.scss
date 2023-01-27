@@ -1,5 +1,24 @@
-$breakpoint:(tab: 991px, mobile: 767px);
+$breakpoint: (
+  tab: 991px,
+  mobile: 767px,
+);
 
-@mixin mobile{
-    @media screen and (max-width: map-get($breakpoint, mobile)){@content;}
-};
+@mixin tab {
+  @media screen and (max-width: map-get($breakpoint, tab)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: map-get($breakpoint, mobile)) {
+    @content;
+  }
+}
+@media screen and (min-width: 1441px) {
+  html {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+  }
+}

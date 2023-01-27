@@ -4,6 +4,14 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 50px) minmax(992px, 1340px) minmax(0, 50px);
   grid-template-rows: 1fr;
+  @include tab {
+    grid-template-columns:
+      minmax(0, 50px) minmax(
+        map-get($breakpoint, mobile),
+        map-get($breakpoint, tab)
+      )
+      minmax(0, 50px);
+  }
   @include mobile {
     grid-template-columns:
       minmax(0, 50px) minmax(375px, map-get($breakpoint, mobile))
