@@ -32,10 +32,12 @@
     }
     &__content {
       border-radius: 50px 50px 0 0;
-      padding: 10px 15px;
+      padding: 10px 35px;
       margin-top: -40px;
       background-color: $bg__container;
-      z-index: 3;
+      @include mobile {
+        padding: 10px 15px;
+      }
       & h2 {
         font-family: "Shrikhand", cursive;
         font-weight: 100;
@@ -43,6 +45,40 @@
     }
     &__btn {
       text-align: center;
+      margin: 30px 0;
     }
+  }
+  &__listing {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+#section_entrees {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+  @include mobile {
+    grid-column: 1;
+  }
+}
+#section_plats {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 2;
+  @include mobile {
+    grid-column: 1;
+  }
+}
+#section_desserts {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row: 3;
+  @include mobile {
+    grid-column: 1;
   }
 }

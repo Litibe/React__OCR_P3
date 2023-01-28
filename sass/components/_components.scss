@@ -166,6 +166,7 @@ button {
       }
       transition: all ease-in-out 800ms;
       &:hover {
+        filter: drop-shadow(0px 2px 5px rgba($color-primary, 0.4));
         .part__recipe {
           width: 85%;
           transition: all ease-in-out 800ms;

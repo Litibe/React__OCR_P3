@@ -1,8 +1,18 @@
 @use "sass:meta";
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @mixin recipe-store($args...) {
   @each $name, $values in meta.keywords($args) {
     .#{$name} {
+      animation: fadeIn map-get($values, time);
       & .recipe__title::before {
         content: map-get($values, title);
       }
