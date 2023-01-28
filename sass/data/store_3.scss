@@ -1,0 +1,32 @@
+@include recipe_store(
+  $store3-appetizer-1: (
+    title: "Tartare de poulpe acidulé",
+    details: "Aux zestes d'orange",
+    price: "25€",
+  ),
+  $store3-appetizer-2: (
+    title: "Velouté de légume d'antan",
+    details: "Carotte, panais, topinambour",
+    price: "35€",
+  ),
+  $store3-appetizer-3: (
+    title: "Soupe à l'oignon",
+    details: "Revisitée",
+    price: "20€",
+  ),
+  $store3-meal-1: (
+    title: "Coquilles Saint-Jacques",
+    details: "Accompagnées d'une purée de panais",
+    price: "40€",
+  ),
+  $store3-meal-2: (
+    title: "Magret de canard",
+    details: "Et parmentier de pommes de terre",
+    price: "35€",
+  ),
+  $store3-meal-3: (
+    title: "Pigeonneau d’Ille-et-Vilaine",
+    details: "Sur son lit de gnocchis aux légumes",
+    price: "44€",
+  )
+);

@@ -1,0 +1,17 @@
+@use "sass:meta";
+
+@mixin recipe-store($args...) {
+  @each $name, $values in meta.keywords($args) {
+    .#{$name} {
+      & .recipe__title::before {
+        content: map-get($values, title);
+      }
+      & .recipe__details::before {
+        content: map-get($values, details);
+      }
+      & .recipe__price::before {
+        content: map-get($values, price);
+      }
+    }
+  }
+}

@@ -1,8 +1,13 @@
 @import "./utils/variables";
 @import "./utils/functions";
+@import "./utils/functions_buy";
 @import "./utils/responsive";
 @import "./base/typography";
 @import "./base/base";
 @import "./components/components";
 @import "./layout/header";
+@import "./layout/main";
 @import "./layout/footer";
+
+@import "./data/store_2";
+@import "./data/store_3";

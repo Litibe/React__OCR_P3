@@ -118,29 +118,3 @@ nav {
     }
   }
 }
-
-.section__store {
-  padding: 60px 15px 90px 15px;
-  background-color: white;
-  @include tab {
-    padding: 20px 15px 50px 15px;
-  }
-  @include mobile {
-    background-color: $bg__container;
-    padding: 30px 15px;
-  }
-  &__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 20px;
-    @include tab {
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-    }
-    @include mobile {
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr;
-    }
-  }
-}
