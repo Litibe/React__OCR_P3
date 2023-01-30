@@ -23,3 +23,38 @@
     }
   }
 }
+
+@keyframes loadingfadein {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loadingfadeout {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@mixin loading {
+  .loading-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: aqua;
+  }
+  .fadeinloading {
+    animation: loadingfadein 3s;
+  }
+}
+@include loading;
