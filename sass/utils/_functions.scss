@@ -44,14 +44,15 @@
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 @mixin loading {
   .loading-page {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: aqua;
+    animation: loadingfadeout 2s;
   }
   .fadeinloading {
     animation: loadingfadein 3s;
