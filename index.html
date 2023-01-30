@@ -25,12 +25,15 @@
       <div class="flex">
         <div class="div-flex">
           <div class="section__search">
-            <div class="section__search_icon">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div class="section__search_text">
-              Paris, Belleville
-            </div>
+            <form method="get">
+              <div class="section__search_icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="section__search_text">
+                <input placeholder="Votre ville recherchée" value="Paris, Belleville" name="city" id="city"
+                  type="search" aria-label="Votre ville recherchée" title="Votre ville recherchée" />
+              </div>
+            </form>
           </div>
 
           <div class="section__presentation">
@@ -38,7 +41,7 @@
               <h2>Réserver le menu qui vous convient</h2>
               <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins</h3>
             </div>
-            <button type="submit">Explorer nos restaurants</button>
+            <a href="#stores"><button>Explorer nos restaurants</button></a>
           </div>
         </div>
         <div class="div-flex">
@@ -65,61 +68,73 @@
       </div>
     </header>
     <main>
-      <section class="section__store">
+      <section class="section__store" id="stores">
         <h2>Restaurants</h2>
         <div class="section__store__list">
-          <article class="card__store"> <a href="./stores/la-palette-du-gout.html">
+          <article class="card__store">
+            <a href="./stores/la-palette-du-gout.html">
               <div class="card__store__img bg-store1">
                 <div class="card__store__badge">Nouveau</div>
               </div>
-              <div class="card__store__banner">
+            </a>
+            <div class="card__store__banner">
+              <a href="./stores/la-palette-du-gout.html">
                 <div>
                   <h2>La palette du goût</h2>
                   <h3>Ménilmontant</h3>
                 </div>
-                <div class="widget__love"></div>
-              </div>
-            </a>
+              </a>
+              <div class="widget__love"></div>
+            </div>
+
           </article>
           <article class="card__store">
             <a href="./stores/la-note-enchantee.html">
               <div class="card__store__img bg-store2">
                 <div class="card__store__badge">Nouveau</div>
               </div>
-              <div class="card__store__banner">
+            </a>
+            <div class="card__store__banner">
+              <a href="./stores/la-note-enchantee.html">
                 <div>
                   <h2>La note enchantée</h2>
                   <h3>Charonne</h3>
                 </div>
-                <div class="widget__love"></div>
-              </div>
-            </a>
+              </a>
+              <div class="widget__love"></div>
+            </div>
+
           </article>
           <article class="card__store">
             <a href="./stores/a-la-francaise.html">
               <div class="card__store__img bg-store3">
               </div>
-              <div class="card__store__banner">
+            </a>
+            <div class="card__store__banner">
+              <a href="./stores/a-la-francaise.html">
                 <div>
                   <h2>A la française</h2>
                   <h3>Cité Rouge</h3>
                 </div>
-                <div class="widget__love"></div>
-              </div>
-            </a>
+              </a>
+              <div class="widget__love"></div>
+            </div>
+
           </article>
           <article class="card__store">
             <a href="./stores/le-delice-des-sens.html">
               <div class="card__store__img bg-store4">
               </div>
-              <div class="card__store__banner">
+            </a>
+            <div class="card__store__banner">
+              <a href="./stores/le-delice-des-sens.html">
                 <div>
                   <h2>Le délice des sens</h2>
                   <h3>Folie-Méricourt</h3>
                 </div>
-                <div class="widget__love"></div>
-              </div>
-            </a>
+              </a>
+              <div class="widget__love"></div>
+            </div>
           </article>
         </div>
       </section>

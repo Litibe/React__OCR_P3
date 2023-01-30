@@ -62,12 +62,27 @@ nav {
   justify-content: center;
   background-color: darken-bg-container($bg__container);
   color: $color__font-secondary;
-
+  & form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   &_icon {
     font-size: 18px;
   }
   &_text {
     padding-left: 15px;
+    width: 50%;
+  }
+  & input[type="search"] {
+    border: 0px solid transparent;
+    height: 100%;
+    background-color: transparent;
+    font-size: 18px;
+  }
+  & input[type="search"]:focus {
+    outline: none;
   }
 }
 

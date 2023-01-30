@@ -1,0 +1,5 @@
+Repository : https://github.com/Litibe/React__OCR_P3
+Git Pages : https://litibe.github.io/React__OCR_P3/
+
+Branche master : 1 commit d'initialisation et commits validation QA uniquement (git merge dev)
+Branche Dev : tous les commits de développement du site
