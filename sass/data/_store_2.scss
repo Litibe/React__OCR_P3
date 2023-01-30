@@ -1,0 +1,62 @@
+@include recipe_store(
+  $store2-appetizer-1: (
+    title: "Ravioles de foie gras",
+    details: "Accompagnés de leur crème à la truffe",
+    price: "25€",
+    time: 1s,
+  ),
+  $store2-appetizer-2: (
+    title: "Caviar osciètre",
+    details: "Sur blini à la farine de blé noir",
+    price: "35€",
+    time: 2s,
+  ),
+  $store2-appetizer-3: (
+    title: "Homard et espuma de potiron",
+    details: "Mariné aux zestes d'orange",
+    price: "20€",
+    time: 3s,
+  ),
+  $store2-appetizer-4: (
+    title: "Foie gras de canard cuit entier",
+    details: "Confiture de figue et pain toasté",
+    price: "35€",
+    time: 4s,
+  ),
+  $store2-meal-1: (
+    title: "Noix de coquilles Saint-Jacques",
+    details: "Sur lit de purée de céleri-rave",
+    price: "40€",
+    time: 1s,
+  ),
+  $store2-meal-2: (
+    title: "Langoustine poêlée",
+    details: "Purée de patate douce",
+    price: "35€",
+    time: 2s,
+  ),
+  $store2-meal-3: (
+    title: "Mijoté de queue de boeuf",
+    details: "Et riz sauvage aux zestes de citron",
+    price: "44€",
+    time: 3s,
+  ),
+  $store2-dessert-1: (
+    title: "Macaron noisette et chocolat",
+    details: "Glace au caramel brun et sel de Guérande",
+    price: "18€",
+    time: 1s,
+  ),
+  $store2-dessert-2: (
+    title: "Baba au rhum revisité",
+    details: "Avec son coulis de citon",
+    price: "22€",
+    time: 2s,
+  ),
+  $store2-dessert-3: (
+    title: "Tarte au citron meringuée",
+    details: "Déstructurée",
+    price: "23€",
+    time: 3s,
+  )
+);
