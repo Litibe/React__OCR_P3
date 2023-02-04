@@ -1,4 +1,5 @@
 .btn__action {
+  display: block;
   color: white;
   padding: 15px 30px;
   border-radius: 50px;
@@ -10,30 +11,6 @@
   background: $color-primary;
   background: linear-gradient(176deg, $color-secondary 0%, $color-primary 100%);
   cursor: pointer;
-  transition: all ease-in-out 700ms;
-  position: relative;
-  z-index: 1;
-  opacity: 1;
-  &:hover {
-    &::after {
-      opacity: 0.5;
-    }
-  }
-  &::after {
-    content: "";
-    filter: drop-shadow(0px 2px 20px $color-primary);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 50px;
-    padding: 15px 18px;
-    opacity: 0;
-    background-color: $color-secondary;
-    z-index: -1;
-    transition: opacity 250ms;
-  }
 }
 
 .card {
@@ -79,40 +56,21 @@
   }
   &__store {
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
-    height: 250px;
+    height: 450px;
     border-radius: 15px;
     background-color: white;
-    z-index: 1;
-
-    &::after {
-      content: "";
-      filter: drop-shadow(0px 2px 15px rgba($color-primary, 0.4));
-      background-color: white;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      border-radius: 15px;
-      padding: 15px 18px;
-      opacity: 0;
-      z-index: -1;
-      transition: opacity 250ms;
-    }
-
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
+    @include mobile {
+      height: 250px;
     }
 
     &__img {
-      height: 175px;
+      height: 375px;
       border-radius: 15px 15px 0 0;
       background-size: cover;
       background-position: bottom;
-      &:hover > .card__store__badge::after {
-        opacity: 1;
+      &:hover > .card__store__badge {
+        background-color: $color-primary;
+        color: lighten($color-primary, 35%);
       }
     }
     &__badge {
@@ -124,20 +82,7 @@
       float: right;
       font-size: 14px;
       z-index: 1;
-      &::after {
-        content: "Nouveau";
-        padding: 5px 10px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: $color-primary;
-        color: lighten($color-primary, 35%);
-        opacity: 0;
-        z-index: 1;
-        transition: opacity 450ms;
-      }
+      transition: all ease-in-out 450ms;
     }
     &__banner {
       background-color: transparent;
@@ -176,52 +121,49 @@
       border-radius: 15px;
       width: 100%;
       height: 68px;
-      transition: all ease-in-out 500ms;
+      white-space: nowrap;
+      overflow: hidden;
 
       .part__recipe {
+        background-color: white;
         width: 100%;
+        height: 100%;
         padding: 10px;
+        overflow: hidden;
+        box-sizing: border-box;
         transition: all ease-in-out 500ms;
+        display: inline-block;
+        transition: all ease-in-out 600ms;
       }
       .part__widget {
         color: white;
         filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
         background-color: $color-tertiary;
-        margin-left: 5px;
+        width: 70px;
         height: 100%;
-        width: 0%;
-        text-align: center;
         border-radius: 0 15px 15px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all ease-in-out 500ms;
-
+        display: block;
+        position: absolute;
+        right: 0;
+        z-index: -1;
         & svg {
+          position: absolute;
+          top: 35%;
+          right: 0;
           width: 23px;
           height: 23px;
-          display: inline-block;
-          transform: rotate(-270deg);
-          transform-origin: 50% 50%;
-          transition: all ease-in-out 500ms;
+          transform: translateX(0) rotate(360deg);
+          transition: all ease-in-out 600ms;
         }
       }
       &:hover {
-        filter: drop-shadow(0px 10px 10px rgba($color-primary, 0.4));
-        transition: all ease-in-out 500ms;
-
         .part__recipe {
-          width: 80%;
+          width: calc(100% - 60px);
         }
         .part__widget {
-          width: 16%;
-
           & svg {
-            transform: rotate(0deg);
+            transform: translateX(-20px) rotate(0deg);
           }
-        }
-        h4 {
-          width: 90%;
         }
       }
       & h4 {
@@ -233,9 +175,6 @@
         width: 85%;
         font-size: 18px;
         font-weight: 500;
-      }
-      & h4::before {
-        content: "text";
       }
 
       &__details {
@@ -258,6 +197,7 @@
         & .recipe__price {
           grid-column-start: 2;
           grid-column-end: 3;
+          text-align: center;
         }
       }
     }
@@ -274,11 +214,13 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="bi bi-heart">\
       <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>\
       </svg>');
-    -webkit-mask: var(--svg);
     mask: var(--svg);
     transition: all ease-in-out 300ms;
 
     &:hover {
+      width: 23px;
+      height: 23px;
+      color: transparent;
       background: $color-primary;
       --svg: url('data:image/svg+xml,\
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="bi bi-heart-fill">\
@@ -289,11 +231,7 @@
         $color-secondary 0%,
         $color-primary 100%
       );
-    }
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
+      mask: var(--svg);
     }
   }
 }

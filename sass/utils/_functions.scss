@@ -54,8 +54,4 @@
     background-color: aqua;
     animation: loadingfadeout 2s;
   }
-  .fadeinloading {
-    animation: loadingfadein 3s;
-  }
 }
-@include loading;

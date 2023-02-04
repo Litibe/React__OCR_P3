@@ -13,7 +13,7 @@
       "not op_mini all",
     "last 3 chrome version",
     "last 3 firefox version",
-    "last 3 safari version"
+    "last 4 safari version"
    ] ,
   "repository": {
     "type": "git",
