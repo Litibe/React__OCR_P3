@@ -1,5 +1,5 @@
 $breakpoint: (
-  tab: 991px,
+  tab: 1024px,
   mobile: 767px,
 );
 
@@ -12,13 +12,5 @@ $breakpoint: (
 @mixin mobile {
   @media screen and (max-width: map-get($breakpoint, mobile)) {
     @content;
-  }
-}
-@media screen and (min-width: 1441px) {
-  html {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
   }
 }

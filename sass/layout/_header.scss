@@ -21,34 +21,30 @@ nav {
     height: 10px;
     font-size: 20px;
     color: $color__font-secondary;
+    width: min-content;
     position: relative;
-    top: 10px;
-    left: 23px;
+    top: 40%;
+    left: 20%;
+    @include mobile {
+      left: 23px;
+      top: 35%;
+    }
   }
   & .nav__logo {
-    width: 100%;
+    margin: auto;
+    width: min-content;
     text-align: center;
     & img {
       width: 170px;
     }
   }
 }
-.flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  margin: auto;
-  background-color: $bg__container;
-  border-radius: 20px;
+.div-flex {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
   @include mobile {
-    background-color: transparent;
-    border-radius: 0;
-  }
-  & .div-flex {
     width: 100%;
-    height: auto;
-    margin: 0 auto;
   }
 }
 .section__search {
@@ -97,11 +93,16 @@ nav {
   margin: 0 auto;
   text-align: center;
   background-color: $bg__container;
+  border-radius: 0 0 20px 20px;
   @include mobile {
     height: 285px;
+    border-radius: 0;
   }
   & div {
-    width: 85%;
+    width: 100%;
+    @include mobile {
+      width: 85%;
+    }
   }
   & button {
     margin-bottom: 20px;
@@ -109,16 +110,15 @@ nav {
 }
 
 .section__fct {
-  width: auto;
-  background-color: transparent;
+  width: 90%;
+  padding: 25px;
+  margin: auto;
   @include mobile {
     background-color: white;
-  }
-  @include mobile {
     margin-top: -20px;
     height: 390px;
   }
-  padding: 25px 25px;
+
   & h2 {
     margin-left: -10px;
     text-align: center;
@@ -129,15 +129,24 @@ nav {
   &__list {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    @include tab {
+      flex-direction: column;
+      margin: auto;
+    }
     @include mobile {
-      margin-top: 40px;
     }
   }
-  &__list div {
-    margin: 30px;
-    width: 100%;
+  &__list .card__fct {
+    width: 25%;
+    padding: 0 10px 0 0;
+    @include tab {
+      margin: 20px auto;
+      width: 50%;
+    }
     @include mobile {
-      margin: 20px 5px 20px 5px;
+      width: 98%;
+      margin: 12px 0;
     }
   }
 }

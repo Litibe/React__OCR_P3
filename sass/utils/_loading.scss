@@ -1,0 +1,60 @@
+.loading-page {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  animation: loadingfadeout 3s linear;
+}
+
+.loader {
+  display: block;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  scale: 50;
+  border-radius: 50%;
+  border: 2px solid $color-primary;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  animation: animloader 1s linear infinite;
+  @include mobile {
+    top: 10%;
+  }
+}
+.loader::after {
+  animation-delay: 500ms;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes loadingfadeout {
+  0% {
+    z-index: 1001;
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1001;
+  }
+  100% {
+    opacity: 0;
+    min-width: 0%;
+    min-height: 0%;
+    z-index: -1;
+  }
+}

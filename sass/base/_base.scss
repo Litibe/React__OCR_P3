@@ -1,20 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  display: grid;
   width: 100%;
-  grid-template-columns: 0px 1fr 0px;
-  grid-template-rows: 1fr;
 }
 .loading-page {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  background-color: $bg__container;
+  background-color: lighten($color-primary, 35%);
 }
 
 .container-page {
-  grid-column-start: 2;
-  grid-column-end: 3;
   background-color: $bg__container;
 }
 .mr-2 {

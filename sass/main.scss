@@ -2,9 +2,13 @@
 @import "./utils/functions";
 @import "./utils/functions_buy";
 @import "./utils/responsive";
+@import "./utils/loading";
+
 @import "./base/typography";
 @import "./base/base";
+
 @import "./components/components";
+
 @import "./layout/header";
 @import "./layout/main";
 @import "./layout/footer";

@@ -56,9 +56,11 @@
         }
       }
     }
-    &__btn button {
+    &__btn {
       text-align: center;
-      margin: 30px auto;
+      & button {
+        margin: 30px auto;
+      }
     }
   }
   &__listing {

@@ -4,7 +4,7 @@
     opacity: 0;
     transform: translateY(15px);
   }
-  20% {
+  10% {
     opacity: 0;
     transform: translateY(15px);
   }
@@ -14,9 +14,10 @@
   }
 }
 @mixin recipe-store($args...) {
+  $i: 300ms;
   @each $name, $values in meta.keywords($args) {
     .#{$name} {
-      animation: fadeIn map-get($values, time);
+      animation: fadeIn $i;
       & .recipe__title::before {
         content: map-get($values, title);
       }
@@ -27,5 +28,6 @@
         content: map-get($values, price);
       }
     }
+    $i: $i + 150ms;
   }
 }
