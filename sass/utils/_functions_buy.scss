@@ -14,7 +14,7 @@
   }
 }
 @mixin recipe-store($args...) {
-  $i: 300ms;
+  $i: 400ms;
   @each $name, $values in meta.keywords($args) {
     .#{$name} {
       animation: fadeIn $i;
@@ -28,6 +28,6 @@
         content: map-get($values, price);
       }
     }
-    $i: $i + 150ms;
+    $i: $i + 400ms;
   }
 }
