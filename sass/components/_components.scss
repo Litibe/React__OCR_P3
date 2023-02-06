@@ -144,10 +144,11 @@
     &__recipe {
       cursor: pointer;
       background-color: white;
-      filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
+      filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.1));
       border-radius: 15px;
       width: 100%;
       height: 68px;
+      box-sizing: border-box;
       white-space: nowrap;
       overflow: hidden;
 
@@ -161,7 +162,6 @@
         transition: all ease-in-out 500ms;
         display: inline-block;
         transition: all ease-in-out 600ms;
-        z-index: 1;
       }
       .part__widget {
         color: white;
@@ -184,7 +184,6 @@
           height: 23px;
           transform: translateX(20px) rotate(360deg);
           transition: all ease-in-out 600ms;
-          z-index: -1;
         }
       }
       &:hover {
@@ -201,9 +200,6 @@
         @include mobile {
           .part__recipe {
             width: calc(100% - 60px);
-          }
-          .part__widget {
-            transform: translateX(-15px);
           }
         }
       }

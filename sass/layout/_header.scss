@@ -25,6 +25,7 @@ nav {
     position: relative;
     top: 40%;
     left: 20%;
+    z-index: 1;
     @include mobile {
       left: 23px;
       top: 35%;
