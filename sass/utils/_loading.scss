@@ -3,9 +3,12 @@
   min-width: 0vw;
   min-height: 0vh;
   opacity: 0;
-  animation: loadingfadeout 0s linear;
+  animation: loadingfadeout 3s linear;
 }
-
+.container-page {
+  animation: loadingfadein 3s linear;
+  visibility: visible;
+}
 .loader {
   display: block;
 }
@@ -65,5 +68,19 @@
     min-width: 0vw;
     min-height: 0vh;
     z-index: -1;
+  }
+}
+
+@keyframes loadingfadein {
+  0% {
+    visibility: hidden;
+  }
+  90% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }
