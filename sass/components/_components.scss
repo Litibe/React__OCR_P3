@@ -232,6 +232,7 @@
   }
 }
 
+/* NO COMPATIBLE SAFARI
 .widget {
   &__love {
     width: 23px;
@@ -263,6 +264,52 @@
       mask: var(--svg);
       mask-repeat: no-repeat;
       transition: all ease-in-out 800ms;
+    }
+  }
+}
+*/
+
+.widget__love {
+  & div {
+    margin-right: -40px;
+    cursor: pointer;
+    & i {
+      font-size: 26px;
+    }
+    & .fa-regular {
+      opacity: 1;
+      transition: all ease-in-out 400ms;
+    }
+    & .fa-solid {
+      color: transparent;
+      position: relative;
+      right: 30px;
+      top: 2px;
+      background: linear-gradient(
+        176deg,
+        $color-secondary 0%,
+        $color-primary 100%
+      );
+      --svg: url('data:image/svg+xml,\
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="bi bi-heart-fill">\
+      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>\
+      </svg>');
+      -webkit-mask-image: var(--svg);
+      mask-image: var(--svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100%;
+      mask-size: 100%;
+      opacity: 0;
+      transition: all ease-in-out 500ms;
+    }
+    &:hover {
+      & .fa-regular {
+        opacity: 0;
+      }
+      & .fa-solid {
+        opacity: 1;
+      }
     }
   }
 }

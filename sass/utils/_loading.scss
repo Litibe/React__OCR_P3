@@ -1,9 +1,9 @@
 .loading-page {
   position: absolute;
-  min-width: 0%;
-  min-height: 0%;
+  min-width: 0vw;
+  min-height: 0vh;
   opacity: 0;
-  animation: loadingfadeout 3s linear;
+  animation: loadingfadeout 0s linear;
 }
 
 .loader {
@@ -47,8 +47,8 @@
 
 @keyframes loadingfadeout {
   0% {
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     z-index: 1001;
     opacity: 1;
   }
@@ -56,14 +56,14 @@
     opacity: 1;
   }
   99% {
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     z-index: 1001;
   }
   100% {
     opacity: 0;
-    min-width: 0%;
-    min-height: 0%;
+    min-width: 0vw;
+    min-height: 0vh;
     z-index: -1;
   }
 }
