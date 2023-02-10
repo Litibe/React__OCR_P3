@@ -1,9 +1,9 @@
 .loading-page {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 0%;
+  min-height: 0%;
   opacity: 0;
-  animation: loadingfadeout 3s linear;
+  animation: loadingfadeout 1s linear;
 }
 
 .loader {
@@ -47,6 +47,8 @@
 
 @keyframes loadingfadeout {
   0% {
+    min-width: 100%;
+    min-height: 100%;
     z-index: 1001;
     opacity: 1;
   }
