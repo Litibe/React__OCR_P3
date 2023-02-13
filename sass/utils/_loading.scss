@@ -3,10 +3,10 @@
   min-width: 0vw;
   min-height: 0vh;
   opacity: 0;
-  animation: loadingfadeout 3s linear;
+  animation: loadingfadeout 2s linear;
 }
 .container-page {
-  animation: loadingfadein 3s linear;
+  animation: loadingfadein 2s linear;
   visibility: visible;
 }
 .loader {
