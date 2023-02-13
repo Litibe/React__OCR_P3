@@ -17,7 +17,7 @@
   $i: 400ms;
   @each $name, $values in meta.keywords($args) {
     .#{$name} {
-      animation: fadeIn $i;
+      animation: fadeIn $i 2000ms;
       & .recipe__title::before {
         content: map-get($values, title);
       }
