@@ -35,7 +35,7 @@
   min-height: 100%;
   opacity: 0;
   -webkit-animation: loadingfadeout 3s linear;
-          animation: loadingfadeout 3s linear;
+  animation: loadingfadeout 3s linear;
 }
 
 .loader {
@@ -45,7 +45,7 @@
 .loader::after,
 .loader::before {
   content: "";
-  scale: 3;
+  transform: scale(3);
   border-radius: 50%;
   border: 2px solid #9356dc;
   position: absolute;
@@ -53,25 +53,23 @@
   width: 50px;
   height: 50px;
   top: 50%;
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-  -webkit-animation: animloader 1s linear infinite;
-          animation: animloader 1s linear infinite;
+  animation-delay: 500ms;
+  animation: animloader 1s linear infinite;
 }
 @media screen and (max-width: 767px) {
   .loader::after,
-.loader::before {
+  .loader::before {
     top: 20%;
     left: calc(50% - 25px);
     width: 50px;
     height: 50px;
-    scale: 2;
+    transform: scale(2);
   }
 }
 
 .loader::after {
   -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  animation-delay: 500ms;
 }
 
 @-webkit-keyframes animloader {
@@ -416,7 +414,7 @@ a {
   background-color: black;
   --svg: url('data:image/svg+xml,      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="bi bi-heart">      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>      </svg>');
   -webkit-mask: var(--svg);
-          mask: var(--svg);
+  mask: var(--svg);
   transition: all ease-in-out 300ms;
 }
 .widget__love:hover {
@@ -428,7 +426,7 @@ a {
   --svg: url('data:image/svg+xml,      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="bi bi-heart-fill">      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>      </svg>');
   background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
   -webkit-mask: var(--svg);
-          mask: var(--svg);
+  mask: var(--svg);
 }
 
 header {
@@ -524,13 +522,13 @@ nav .nav__logo img {
   padding-left: 15px;
   width: 50%;
 }
-.section__search input[type=search] {
+.section__search input[type="search"] {
   border: 0px solid transparent;
   height: 100%;
   background-color: transparent;
   font-size: 18px;
 }
-.section__search input[type=search]:focus {
+.section__search input[type="search"]:focus {
   outline: none;
 }
 
@@ -781,7 +779,7 @@ footer div a:hover {
 
 .store1-appetizer-1 {
   -webkit-animation: fadeIn 300ms;
-          animation: fadeIn 300ms;
+  animation: fadeIn 300ms;
 }
 .store1-appetizer-1 .recipe__title::before {
   content: "Fricassée d'escargot";
@@ -795,7 +793,7 @@ footer div a:hover {
 
 .store1-appetizer-2 {
   -webkit-animation: fadeIn 500ms;
-          animation: fadeIn 500ms;
+  animation: fadeIn 500ms;
 }
 .store1-appetizer-2 .recipe__title::before {
   content: "Foie gras de canard mi-cuit";
@@ -809,7 +807,7 @@ footer div a:hover {
 
 .store1-appetizer-3 {
   -webkit-animation: fadeIn 700ms;
-          animation: fadeIn 700ms;
+  animation: fadeIn 700ms;
 }
 .store1-appetizer-3 .recipe__title::before {
   content: "Oeuf au plat";
@@ -823,7 +821,7 @@ footer div a:hover {
 
 .store1-meal-1 {
   -webkit-animation: fadeIn 900ms;
-          animation: fadeIn 900ms;
+  animation: fadeIn 900ms;
 }
 .store1-meal-1 .recipe__title::before {
   content: "Filet de boeuf aux herbes";
@@ -837,7 +835,7 @@ footer div a:hover {
 
 .store1-meal-2 {
   -webkit-animation: fadeIn 1100ms;
-          animation: fadeIn 1100ms;
+  animation: fadeIn 1100ms;
 }
 .store1-meal-2 .recipe__title::before {
   content: "Parmentier de queue de boeuf";
@@ -851,7 +849,7 @@ footer div a:hover {
 
 .store1-meal-3 {
   -webkit-animation: fadeIn 1300ms;
-          animation: fadeIn 1300ms;
+  animation: fadeIn 1300ms;
 }
 .store1-meal-3 .recipe__title::before {
   content: "Filet de turbot";
@@ -865,7 +863,7 @@ footer div a:hover {
 
 .store1-dessert-1 {
   -webkit-animation: fadeIn 1500ms;
-          animation: fadeIn 1500ms;
+  animation: fadeIn 1500ms;
 }
 .store1-dessert-1 .recipe__title::before {
   content: "Paris-Brest";
@@ -879,7 +877,7 @@ footer div a:hover {
 
 .store1-dessert-2 {
   -webkit-animation: fadeIn 1700ms;
-          animation: fadeIn 1700ms;
+  animation: fadeIn 1700ms;
 }
 .store1-dessert-2 .recipe__title::before {
   content: "Macaron au chocolat d'exception";
@@ -893,7 +891,7 @@ footer div a:hover {
 
 .store1-dessert-3 {
   -webkit-animation: fadeIn 1900ms;
-          animation: fadeIn 1900ms;
+  animation: fadeIn 1900ms;
 }
 .store1-dessert-3 .recipe__title::before {
   content: "Mousse au chocolat";
@@ -907,7 +905,7 @@ footer div a:hover {
 
 .store2-appetizer-1 {
   -webkit-animation: fadeIn 300ms;
-          animation: fadeIn 300ms;
+  animation: fadeIn 300ms;
 }
 .store2-appetizer-1 .recipe__title::before {
   content: "Ravioles de foie gras";
@@ -921,7 +919,7 @@ footer div a:hover {
 
 .store2-appetizer-2 {
   -webkit-animation: fadeIn 500ms;
-          animation: fadeIn 500ms;
+  animation: fadeIn 500ms;
 }
 .store2-appetizer-2 .recipe__title::before {
   content: "Caviar osciètre";
@@ -935,7 +933,7 @@ footer div a:hover {
 
 .store2-appetizer-3 {
   -webkit-animation: fadeIn 700ms;
-          animation: fadeIn 700ms;
+  animation: fadeIn 700ms;
 }
 .store2-appetizer-3 .recipe__title::before {
   content: "Homard et espuma de potiron";
@@ -949,7 +947,7 @@ footer div a:hover {
 
 .store2-appetizer-4 {
   -webkit-animation: fadeIn 900ms;
-          animation: fadeIn 900ms;
+  animation: fadeIn 900ms;
 }
 .store2-appetizer-4 .recipe__title::before {
   content: "Foie gras de canard cuit entier";
@@ -963,7 +961,7 @@ footer div a:hover {
 
 .store2-meal-1 {
   -webkit-animation: fadeIn 1100ms;
-          animation: fadeIn 1100ms;
+  animation: fadeIn 1100ms;
 }
 .store2-meal-1 .recipe__title::before {
   content: "Noix de coquilles Saint-Jacques";
@@ -977,7 +975,7 @@ footer div a:hover {
 
 .store2-meal-2 {
   -webkit-animation: fadeIn 1300ms;
-          animation: fadeIn 1300ms;
+  animation: fadeIn 1300ms;
 }
 .store2-meal-2 .recipe__title::before {
   content: "Langoustine poêlée";
@@ -991,7 +989,7 @@ footer div a:hover {
 
 .store2-meal-3 {
   -webkit-animation: fadeIn 1500ms;
-          animation: fadeIn 1500ms;
+  animation: fadeIn 1500ms;
 }
 .store2-meal-3 .recipe__title::before {
   content: "Mijoté de queue de boeuf";
@@ -1005,7 +1003,7 @@ footer div a:hover {
 
 .store2-dessert-1 {
   -webkit-animation: fadeIn 1700ms;
-          animation: fadeIn 1700ms;
+  animation: fadeIn 1700ms;
 }
 .store2-dessert-1 .recipe__title::before {
   content: "Macaron noisette et chocolat";
@@ -1019,7 +1017,7 @@ footer div a:hover {
 
 .store2-dessert-2 {
   -webkit-animation: fadeIn 1900ms;
-          animation: fadeIn 1900ms;
+  animation: fadeIn 1900ms;
 }
 .store2-dessert-2 .recipe__title::before {
   content: "Baba au rhum revisité";
@@ -1033,7 +1031,7 @@ footer div a:hover {
 
 .store2-dessert-3 {
   -webkit-animation: fadeIn 2100ms;
-          animation: fadeIn 2100ms;
+  animation: fadeIn 2100ms;
 }
 .store2-dessert-3 .recipe__title::before {
   content: "Tarte au citron meringuée";
@@ -1047,7 +1045,7 @@ footer div a:hover {
 
 .store3-appetizer-1 {
   -webkit-animation: fadeIn 300ms;
-          animation: fadeIn 300ms;
+  animation: fadeIn 300ms;
 }
 .store3-appetizer-1 .recipe__title::before {
   content: "Tartare de poulpe acidulé";
@@ -1061,7 +1059,7 @@ footer div a:hover {
 
 .store3-appetizer-2 {
   -webkit-animation: fadeIn 500ms;
-          animation: fadeIn 500ms;
+  animation: fadeIn 500ms;
 }
 .store3-appetizer-2 .recipe__title::before {
   content: "Velouté de légume d'antan";
@@ -1075,7 +1073,7 @@ footer div a:hover {
 
 .store3-appetizer-3 {
   -webkit-animation: fadeIn 700ms;
-          animation: fadeIn 700ms;
+  animation: fadeIn 700ms;
 }
 .store3-appetizer-3 .recipe__title::before {
   content: "Soupe à l'oignon";
@@ -1089,7 +1087,7 @@ footer div a:hover {
 
 .store3-meal-1 {
   -webkit-animation: fadeIn 900ms;
-          animation: fadeIn 900ms;
+  animation: fadeIn 900ms;
 }
 .store3-meal-1 .recipe__title::before {
   content: "Coquilles Saint-Jacques";
@@ -1103,7 +1101,7 @@ footer div a:hover {
 
 .store3-meal-2 {
   -webkit-animation: fadeIn 1100ms;
-          animation: fadeIn 1100ms;
+  animation: fadeIn 1100ms;
 }
 .store3-meal-2 .recipe__title::before {
   content: "Magret de canard";
@@ -1117,7 +1115,7 @@ footer div a:hover {
 
 .store3-meal-3 {
   -webkit-animation: fadeIn 1300ms;
-          animation: fadeIn 1300ms;
+  animation: fadeIn 1300ms;
 }
 .store3-meal-3 .recipe__title::before {
   content: "Pigeonneau d’Ille-et-Vilaine Revisité Revisité";
@@ -1131,7 +1129,7 @@ footer div a:hover {
 
 .store3-dessert-1 {
   -webkit-animation: fadeIn 1500ms;
-          animation: fadeIn 1500ms;
+  animation: fadeIn 1500ms;
 }
 .store3-dessert-1 .recipe__title::before {
   content: "Pétales de violettes glacés";
@@ -1145,7 +1143,7 @@ footer div a:hover {
 
 .store3-dessert-2 {
   -webkit-animation: fadeIn 1700ms;
-          animation: fadeIn 1700ms;
+  animation: fadeIn 1700ms;
 }
 .store3-dessert-2 .recipe__title::before {
   content: "Fondant au chocolat";
@@ -1159,7 +1157,7 @@ footer div a:hover {
 
 .store3-dessert-3 {
   -webkit-animation: fadeIn 1900ms;
-          animation: fadeIn 1900ms;
+  animation: fadeIn 1900ms;
 }
 .store3-dessert-3 .recipe__title::before {
   content: "Millefeuille croustillant";
@@ -1173,7 +1171,7 @@ footer div a:hover {
 
 .store4-appetizer-1 {
   -webkit-animation: fadeIn 300ms;
-          animation: fadeIn 300ms;
+  animation: fadeIn 300ms;
 }
 .store4-appetizer-1 .recipe__title::before {
   content: "Tartare de thon";
@@ -1187,7 +1185,7 @@ footer div a:hover {
 
 .store4-appetizer-2 {
   -webkit-animation: fadeIn 500ms;
-          animation: fadeIn 500ms;
+  animation: fadeIn 500ms;
 }
 .store4-appetizer-2 .recipe__title::before {
   content: "Bouchée de homard croustillant";
@@ -1201,7 +1199,7 @@ footer div a:hover {
 
 .store4-appetizer-3 {
   -webkit-animation: fadeIn 700ms;
-          animation: fadeIn 700ms;
+  animation: fadeIn 700ms;
 }
 .store4-appetizer-3 .recipe__title::before {
   content: "Velouté de cèpes";
@@ -1215,7 +1213,7 @@ footer div a:hover {
 
 .store4-appetizer-4 {
   -webkit-animation: fadeIn 900ms;
-          animation: fadeIn 900ms;
+  animation: fadeIn 900ms;
 }
 .store4-appetizer-4 .recipe__title::before {
   content: "Foie gras de canard cuit entier";
@@ -1229,7 +1227,7 @@ footer div a:hover {
 
 .store4-meal-1 {
   -webkit-animation: fadeIn 1100ms;
-          animation: fadeIn 1100ms;
+  animation: fadeIn 1100ms;
 }
 .store4-meal-1 .recipe__title::before {
   content: "Poulet rôti aux herbes de Provence";
@@ -1243,7 +1241,7 @@ footer div a:hover {
 
 .store4-meal-2 {
   -webkit-animation: fadeIn 1300ms;
-          animation: fadeIn 1300ms;
+  animation: fadeIn 1300ms;
 }
 .store4-meal-2 .recipe__title::before {
   content: "Langouste rôtie";
@@ -1257,7 +1255,7 @@ footer div a:hover {
 
 .store4-meal-3 {
   -webkit-animation: fadeIn 1500ms;
-          animation: fadeIn 1500ms;
+  animation: fadeIn 1500ms;
 }
 .store4-meal-3 .recipe__title::before {
   content: "Côte de boeuf Angus";
@@ -1271,7 +1269,7 @@ footer div a:hover {
 
 .store4-dessert-1 {
   -webkit-animation: fadeIn 1700ms;
-          animation: fadeIn 1700ms;
+  animation: fadeIn 1700ms;
 }
 .store4-dessert-1 .recipe__title::before {
   content: "Farandole de desserts";
@@ -1285,7 +1283,7 @@ footer div a:hover {
 
 .store4-dessert-2 {
   -webkit-animation: fadeIn 1900ms;
-          animation: fadeIn 1900ms;
+  animation: fadeIn 1900ms;
 }
 .store4-dessert-2 .recipe__title::before {
   content: "Crème Brulée";
@@ -1299,7 +1297,7 @@ footer div a:hover {
 
 .store4-dessert-3 {
   -webkit-animation: fadeIn 2100ms;
-          animation: fadeIn 2100ms;
+  animation: fadeIn 2100ms;
 }
 .store4-dessert-3 .recipe__title::before {
   content: "Tiramisu";
@@ -1309,4 +1307,4 @@ footer div a:hover {
 }
 .store4-dessert-3 .recipe__price::before {
   content: "23€";
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
