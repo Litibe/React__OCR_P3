@@ -1,0 +1,99 @@
+.btn {
+  &__action {
+    display: inline-block;
+    margin: 20px auto;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background: $color-primary;
+    background: linear-gradient(
+      176deg,
+      $color-secondary 0%,
+      $color-primary 100%
+    );
+    cursor: pointer;
+    transition: all ease-in-out 700ms;
+    z-index: 1;
+    opacity: 1;
+    position: relative;
+
+    &:hover {
+      &::after {
+        opacity: 1;
+        transition: opacity 450ms;
+      }
+    }
+    &::after {
+      content: "";
+      box-shadow: 2px 5px 5px rgba(($color-primary), 1);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50px;
+      padding: 10px 15px;
+      opacity: 0;
+      background: linear-gradient(
+        176deg,
+        lighten($color-secondary, 12%) 0%,
+        lighten($color-primary, 12%) 100%
+      );
+      z-index: -1;
+      transition: opacity 450ms;
+    }
+  }
+  &__love {
+    & span {
+      position: relative;
+      top: -50px;
+
+      right: calc(-100% + 50px);
+      bottom: 0;
+      cursor: pointer;
+      & i {
+        font-size: 26px;
+      }
+      & .fa-regular {
+        opacity: 1;
+        transition: all ease-in-out 400ms;
+      }
+      & .fa-solid {
+        color: transparent;
+        position: relative;
+        right: 30px;
+        top: 2px;
+        background: linear-gradient(
+          176deg,
+          $color-secondary 0%,
+          $color-primary 100%
+        );
+        --svg: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="bi bi-heart-fill">\
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>\
+        </svg>');
+        -webkit-mask-image: var(--svg);
+        mask-image: var(--svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100%;
+        mask-size: 100%;
+        opacity: 0;
+        transition: all ease-in-out 500ms;
+      }
+      &:hover {
+        & .fa-regular {
+          opacity: 0;
+        }
+        & .fa-solid {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

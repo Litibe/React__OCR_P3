@@ -1,48 +1,40 @@
 footer {
-  background: darken($bg__container, 70%);
-  color: black-or-white-color(darken($bg__container, 70%));
+  background: darken($bg-container, 70%);
+  color: black-or-white-color(darken($bg-container, 70%));
   height: 190px;
   padding: 10px 20px 0 20px;
-
+  @include tab {
+    text-align: center;
+  }
   & h2 {
     font-family: "Shrikhand", cursive;
     font-weight: 100;
-    text-align: center;
-    @include mobile {
-      text-align: start;
-      font-size: 16px;
+    text-align: start;
+    font-size: 18px;
+    @include tab {
+      text-align: center;
     }
   }
   & .footer__nav {
-    height: 60%;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    @include mobile {
-      flex-direction: column;
-      height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    font-size: 15px;
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      text-align: center;
+      margin: auto;
     }
-  }
-  & div {
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-weight: 400;
 
-    @include mobile {
-      height: auto;
-    }
-    & i {
-      font-size: 14px;
-      margin-right: 10px;
-    }
     & a {
-      margin: 5px 0;
-      color: inherit;
-      transition: all ease-in-out 300ms;
-
+      transition: all ease-in-out 450ms;
+      display: block;
+      & i {
+        margin-right: 10px;
+        max-width: 15px;
+      }
       &:hover {
         color: $color-primary;
       }

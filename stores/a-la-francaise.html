@@ -2,53 +2,51 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#9356DC" />
-  <meta name="author" content="Lionel TISSIER" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#9356DC">
+  <meta name="author" content="Lionel TISSIER">
   <meta name="description"
-    content="Commandez votre repas en ligne & réduisez votre temps d'attente dans les restaurants" />
+    content="Commandez votre repas en ligne & réduisez votre temps d'attente dans les restaurants">
   <title>OhMyFood - Restaurant A la Française</title>
-  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
   <script src="https://kit.fontawesome.com/7008d6fa0f.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-  <div class="loading-page ">
+  <div class="loading-page">
     <span class="loader"></span>
   </div>
   <div class="container-page">
     <header>
       <nav>
-        <a href="../index.html" class="nav__icon-return "><i class="fa-solid fa-arrow-left"></i></a>
-        <a href="../index.html" class="nav__logo">
+        <a href="../" class="nav__icon-return "><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="../" class="nav__logo">
           <img src="../images/logo/ohmyfood.png" alt="Logo de OhMyFood" title="Logo de OhMyFood">
+          <h1 class="d-none">Oh My Food</h1>
         </a>
-        <h1 class="d-none">Oh My Food</h1>
       </nav>
     </header>
-    <main class="section__buy">
-      <div class="section__buy__img bg-store3">
+    <main>
+      <div class="bg-store img-store3">
       </div>
-      <div class="section__buy__content">
-        <div class="section__buy__content__title ">
-          <h2>A la Française</h2>
-          <div onclick="" class="widget__love">
-            <div class="heart-line"><i class="fa-regular fa-heart"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
+      <section class="sect__buy">
+        <h2>A la Française</h2>
+        <div onclick="" class="btn__love">
+          <span class="heart-line"><i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </span>
         </div>
-        <div class="section__listing">
-          <section id="section_entrees">
-            <h3 class="card__buy__title">ENTREES</h3>
+        <div class="sect__buy__listing">
+          <article id="listing_entrees">
+            <h3>ENTREES</h3>
             <div class="card__buy__list">
-              <div onclick="" class="card__buy__recipe store3-appetizer-1 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Tartate de poulpe acidulé</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Aux zestes d'orange</span><span class="recipe__price">25€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -57,11 +55,12 @@
                       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                   </svg></div>
               </div>
-              <div onclick="" class="card__buy__recipe store3-appetizer-2 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Velouté de Légumes d'antan</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Carotte, panais, topinambout</span><span
+                      class="recipe__price">35€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -70,11 +69,11 @@
                       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                   </svg></div>
               </div>
-              <div onclick="" class="card__buy__recipe store3-appetizer-3 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Soupe à l'oignon</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Revisitée</span><span class="recipe__price">20€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -84,15 +83,16 @@
                   </svg></div>
               </div>
             </div>
-          </section>
-          <section id="section_plats">
-            <h3 class="card__buy__title">PLATS</h3>
+          </article>
+          <article id="listing_plats">
+            <h3>PLATS</h3>
             <div class="card__buy__list">
-              <div onclick="" class="card__buy__recipe store3-meal-1 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Coquilles Saint-Jacques</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Accompagnées d'une purée de panais</span><span
+                      class="recipe__price">40€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -101,11 +101,12 @@
                       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                   </svg></div>
               </div>
-              <div onclick="" class="card__buy__recipe store3-meal-2 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Maigret de canard</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Et parmentier de pommes de terre</span><span
+                      class="recipe__price">35€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -114,11 +115,12 @@
                       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                   </svg></div>
               </div>
-              <div onclick="" class="card__buy__recipe store3-meal-3 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Pigeonneau d'Ile-et-Vilaine</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Sur son lit de gnocchis aux légumes</span><span
+                      class="recipe__price">44€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -128,15 +130,15 @@
                   </svg></div>
               </div>
             </div>
-          </section>
-          <section id="section_desserts">
-            <h3 class="card__buy__title">DESSERTS</h3>
+          </article>
+          <article id="listing_desserts">
+            <h3>DESSERTS</h3>
             <div class="card__buy__list">
-              <div onclick="" class="card__buy__recipe store3-dessert-1 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Pétales de viollettes glacés</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Et purée de noisettes</span><span class="recipe__price">18€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -145,11 +147,11 @@
                       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                   </svg></div>
               </div>
-              <div onclick="" class="card__buy__recipe store3-dessert-2 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Fondant au chocolat</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Revisité</span><span class="recipe__price">22€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -158,11 +160,12 @@
                       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                   </svg></div>
               </div>
-              <div onclick="" class="card__buy__recipe store3-dessert-3 flex-row">
+              <div onclick="" class="card__buy__recipe">
                 <div class="part__recipe">
-                  <h4 class="recipe__title"></h4>
+                  <h4 class="recipe__title">Millefeuille croustillant</h4>
                   <div onclick="" class="card__buy__recipe__details">
-                    <span class="recipe__details"></span><span class="recipe__price"></span>
+                    <span class="recipe__details">Myrtilles et pâte d'amande</span><span
+                      class="recipe__price">23€</span>
                   </div>
                 </div>
                 <div class="part__widget"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -172,22 +175,20 @@
                   </svg></div>
               </div>
             </div>
-          </section>
+          </article>
         </div>
-      </div>
-      <div class="section__buy__btn"><button class="btn__action" type="submit">Commander</button></div>
+        <a href="#stores" class="btn__action">Commander</a>
+      </section>
     </main>
     <footer>
       <h2>ohmyfood</h2>
       <div class="footer__nav">
-        <div>
-          <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-          <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
-        </div>
-        <div>
-          <a href="#">Mentions légales</a>
-          <a href="mailto:contact@ohmyfood.com?subject=Demande%20d'informations">Contact</a>
-        </div>
+        <a href="#">
+          <i class="fa-solid fa-utensils"></i>
+          <span>Proposer un restaurant</span></a>
+        <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+        <a href="#">Mentions légales</a>
+        <a href="mailto:contact@ohmyfood.com?subject=Demande%20d'informations">Contact</a>
       </div>
     </footer>
   </div>

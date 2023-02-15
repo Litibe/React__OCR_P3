@@ -7,34 +7,11 @@ body {
 .loading-page {
   background-color: lighten($color-primary, 35%);
 }
-
 .container-page {
-  background-color: $bg__container;
+  background-color: $bg-container;
 }
-.mr-2 {
-  margin-right: 20px;
-}
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-.d-none {
-  display: none;
-}
-.color-white {
-  color: white;
-}
+
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.space-between {
-  justify-content: space-between;
 }

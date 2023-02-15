@@ -1,20 +1,17 @@
 @import "./utils/variables";
 @import "./utils/functions";
-@import "./utils/functions_buy";
+@import "./utils/animations";
 @import "./utils/responsive";
 @import "./utils/loading";
 
 @import "./base/typography";
 @import "./base/base";
 
-@import "./components/components";
+@import "./components/buttons";
+@import "./components/cards";
 
 @import "./layout/header";
+@import "./layout/sections";
+@import "./layout/sections";
 @import "./layout/main";
 @import "./layout/footer";
-
-@import "./data/img_cover_stores";
-@import "./data/store_1";
-@import "./data/store_2";
-@import "./data/store_3";
-@import "./data/store_4";
